@@ -1,0 +1,19 @@
+[package]
+name = "postgres_data_sync"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+async-std = { version ="1.13.0", features = ["attributes"] }
+bigdecimal = "0.4"
+chrono = "0.4.38"
+dotenv = "0.15.0"
+openssl = { version = "0.10.25", features = ["vendored"] }
+openssl-probe = "0.1.2"
+sqlx = {  version = "0.8.2", features = ["postgres","postgres", "runtime-async-std", "runtime-tokio-rustls","json", "time", "bigdecimal", "uuid", "chrono"] }
+native-tls = "0.2"
+serde_json = "1.0.132"
+uuid = { version = "1.11.0", features = ["v4"] }
+serde = { version = "1.0", features = ["derive"] }
+tokio = { version = "1", features = ["full", "rt", "rt-multi-thread", "macros"] }
+futures = "0.3.31"
